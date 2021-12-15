@@ -102,6 +102,11 @@ namespace FreshersApp.Data.Interface
         Int64 UpdateRegularization(object filter);
         Int64 DeleteRegularization(object filter);
 
+        IEnumerable<T> GetPayroll<T>();
+        Int64 InsertPayroll(object filter);
+        Int64 UpdatePayroll(object filter);
+        Int64 DeletePayroll(object filter);
+
     }
 
 }

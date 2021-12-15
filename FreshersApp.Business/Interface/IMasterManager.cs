@@ -145,6 +145,14 @@ namespace FreshersApp.Business.Interface
         Int64 UpdateRegularization(MasterEntity entity);
 
         Int64 DeleteRegularization(object filter);
+
+        IEnumerable<dynamic> GetPayroll();
+
+        Int64 InsertPayroll(MasterEntity entity);
+
+        Int64 UpdatePayroll(MasterEntity entity);
+
+        Int64 DeletePayroll(object filter);
     }
     
 }

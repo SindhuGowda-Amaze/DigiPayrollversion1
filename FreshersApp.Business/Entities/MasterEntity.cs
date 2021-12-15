@@ -284,6 +284,11 @@ namespace FreshersApp.Business.Entities
 		public String UserName { get; set; }
 		public String Role { get; set; }
 		public DateTime DateAdded { get; set; }
+		public DateTime Year { get; set; }
+		public DateTime Month { get; set; }
+		public Int64 Period { get; set; }
+		public String Pay_Roll_Run_Type { get; set; }
+		public DateTime Transaction_Date { get; set; }
 
 	}
 }

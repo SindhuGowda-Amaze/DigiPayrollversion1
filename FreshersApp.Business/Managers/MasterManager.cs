@@ -1591,9 +1591,9 @@ namespace FreshersApp.Business.Managers
                     ExpectedInTime = entity.ExpectedInTime,
                     PunchInTime = entity.PunchInTime,
                     ExpectedOutTime = entity.ExpectedOutTime,
-                    @PunchOutTime = entity.PunchOutTime,
-                    @WorkHours = entity.WorkHours,
-                    @ExtraHours = entity.ExtraHours
+                    PunchOutTime = entity.PunchOutTime,
+                    WorkHours = entity.WorkHours,
+                    ExtraHours = entity.ExtraHours
 
                 };
                 return IMasterRepository.InsertRegularization(filter);
@@ -1616,9 +1616,9 @@ namespace FreshersApp.Business.Managers
                     ExpectedInTime = entity.ExpectedInTime,
                     PunchInTime = entity.PunchInTime,
                     ExpectedOutTime = entity.ExpectedOutTime,
-                    @PunchOutTime = entity.PunchOutTime,
-                    @WorkHours = entity.WorkHours,
-                    @ExtraHours = entity.ExtraHours
+                    PunchOutTime = entity.PunchOutTime,
+                    WorkHours = entity.WorkHours,
+                    ExtraHours = entity.ExtraHours
 
                 };
                 return IMasterRepository.UpdateRegularization(filter);
@@ -1634,6 +1634,79 @@ namespace FreshersApp.Business.Managers
             try
             {
                 return IMasterRepository.DeleteRegularization(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<dynamic> GetPayroll()
+        {
+            try
+            {
+                return IMasterRepository.GetPayroll<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertPayroll(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+
+                    Year = entity.Year,
+                    Month = entity.Month,
+                    Period = entity.Period,
+                    Pay_Roll_Run_Type = entity.Pay_Roll_Run_Type,
+                    Pay_Group = entity.Pay_Group,
+                    PunchOutTime = entity.PunchOutTime,
+                    Transaction_Date = entity.Transaction_Date,
+
+                };
+                return IMasterRepository.UpdateRegularization(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdatePayroll(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+                    Year = entity.Year,
+                    Month = entity.Month,
+                    Period = entity.Period,
+                    Pay_Roll_Run_Type = entity.Pay_Roll_Run_Type,
+                    Pay_Group = entity.Pay_Group,
+                    PunchOutTime = entity.PunchOutTime,
+                    Transaction_Date = entity.Transaction_Date,
+                 
+
+                };
+                return IMasterRepository.UpdateRegularization(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeletePayroll(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeletePayroll(filter);
             }
             catch (Exception ex)
             {

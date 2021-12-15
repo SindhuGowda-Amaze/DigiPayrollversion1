@@ -890,5 +890,53 @@ namespace FreshersApp.Data.Repositories
                 throw ex;
             }
         }
+
+        public IEnumerable<T> GetPayroll<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[SProc_GetPayroll]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertPayroll(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_InsertPayroll]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdatePayroll(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_UpdatePayroll]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeletePayroll(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_DeleteRegularization]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
