@@ -1147,6 +1147,499 @@ namespace FreshersApp.Business.Managers
                 throw ex;
             }
         }
+
+        public IEnumerable<dynamic> GetAdjustment()
+        {
+            try
+            {
+                return IMasterRepository.GetAdjustment<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertAdjustment(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    Type = entity.Type,
+                    Name = entity.Name,
+                    Code = entity.Code,
+                    Amount = entity.Amount,
+                    Remarks = entity.Remarks,
+                    Before = entity.Before,
+                    Taxable = entity.Taxable,
+                    MaxAccumulated = entity.MaxAccumulatedfloat
+
+                };
+                return IMasterRepository.InsertGovernmentRecords(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateAdjustment(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID=entity.ID,
+                    Type = entity.Type,
+                    Name = entity.Name,
+                    Code = entity.Code,
+                    Amount = entity.Amount,
+                    Remarks = entity.Remarks,
+                    Before = entity.Before,
+                    Taxable = entity.Taxable,
+                    MaxAccumulated = entity.MaxAccumulatedfloat
+
+                };
+                return IMasterRepository.InsertGovernmentRecords(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteAdjustment(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteAdjustment(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<dynamic> GetMyAttendenceDetails()
+        {
+            try
+            {
+                return IMasterRepository.GetMyAttendenceDetails<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertMyAttendenceDetails(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+
+                    Date = entity.Date,
+                    Shift = entity.Shift,
+                    ExpectedInTime = entity.ExpectedInTime,
+                    PunchInTime = entity.PunchInTime,
+                    ExpectedOutTime = entity.ExpectedOutTime,
+                    PunchOutTime = entity.PunchOutTime,
+                    WorkHours = entity.WorkHours,
+                    ExtraHours = entity.ExtraHours
+
+                };
+                return IMasterRepository.InsertMyAttendenceDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateMyAttendenceDetails(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+                    Date = entity.Date,
+                    Shift = entity.Shift,
+                    ExpectedInTime = entity.ExpectedInTime,
+                    PunchInTime = entity.PunchInTime,
+                    ExpectedOutTime = entity.ExpectedOutTime,
+                    PunchOutTime = entity.PunchOutTime,
+                    WorkHours = entity.WorkHours,
+                    ExtraHours = entity.ExtraHours
+
+                };
+                return IMasterRepository.UpdateMyAttendenceDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteMyAttendenceDetails(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteMyAttendenceDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<dynamic> GetMyOverTimeDetails()
+        {
+            try
+            {
+                return IMasterRepository.GetMyOverTimeDetails<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertMyOverTimeDetails(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                 
+                    Date = entity.Date,
+                    Shift = entity.Shift,
+                    OTHours=entity.OTHours,
+                    Comments=entity.Comments,
+                    Status=entity.Status
+
+                };
+                return IMasterRepository.UpdateMyAttendenceDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateMyOverTimeDetails(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+                    Date = entity.Date,
+                    Shift = entity.Shift,
+                    OTHours = entity.OTHours,
+                    Comments = entity.Comments,
+                    Status = entity.Status
+
+                };
+                return IMasterRepository.UpdateMyAttendenceDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteMyOverTimeDetails(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteMyOverTimeDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<dynamic> GetMyLeaveReport()
+        {
+            try
+            {
+                return IMasterRepository.GetMyLeaveReport<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertMyLeaveReport(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+
+                    FromDate = entity.FromDate,
+                    TODate = entity.TODate,
+                    LeaveTypeAndReason = entity.LeaveTypeAndReason,
+                    LeaveDaysCount = entity.LeaveDaysCount,
+                    Comments = entity.Comments,
+                    Status = entity.Status
+
+                };
+                return IMasterRepository.InsertMyLeaveReport(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateMyLeaveReport(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+                    FromDate = entity.FromDate,
+                    TODate = entity.TODate,
+                    LeaveTypeAndReason = entity.LeaveTypeAndReason,
+                    LeaveDaysCount = entity.LeaveDaysCount,
+                    Comments = entity.Comments,
+                    Status = entity.Status
+
+                };
+                return IMasterRepository.UpdateMyLeaveReport(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteMyLeaveReport(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteMyLeaveReport(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<dynamic> GetUserDetails()
+        {
+            try
+            {
+                return IMasterRepository.GetUserDetails<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertUserDetails(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+
+                    UserName = entity.UserName,
+                    Email = entity.Email,
+                    Role = entity.Role,
+                    DateAdded = entity.DateAdded,
+                   
+
+                };
+                return IMasterRepository.UpdateMyLeaveReport(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateUserDetails(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+                    UserName = entity.UserName,
+                    Email = entity.Email,
+                    Role = entity.Role,
+                    DateAdded = entity.DateAdded,
+
+                };
+                return IMasterRepository.UpdateMyLeaveReport(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteUserDetails(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteUserDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<dynamic> GetMyWeeklyShift()
+        {
+            try
+            {
+                return IMasterRepository.GetMyWeeklyShift<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertMyWeeklyShift(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+
+                    ShiftDate = entity.ShiftDate,
+                    ShiftName = entity.ShiftName,
+                    StartTime = entity.StartTime,
+                    EndTime = entity.EndTime,
+                   
+
+                };
+                return IMasterRepository.UpdateMyLeaveReport(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateMyWeeklyShift(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+                    ShiftDate = entity.ShiftDate,
+                    ShiftName = entity.ShiftName,
+                    StartTime = entity.StartTime,
+                    EndTime = entity.EndTime,
+
+                };
+                return IMasterRepository.UpdateMyLeaveReport(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteMyWeeklyShift(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteMyWeeklyShift(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<dynamic> GetRegularization()
+        {
+            try
+            {
+                return IMasterRepository.GetRegularization<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertRegularization(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+
+                    Date = entity.Date,
+                    Shift = entity.Shift,
+                    ExpectedInTime = entity.ExpectedInTime,
+                    PunchInTime = entity.PunchInTime,
+                    ExpectedOutTime = entity.ExpectedOutTime,
+                    @PunchOutTime = entity.PunchOutTime,
+                    @WorkHours = entity.WorkHours,
+                    @ExtraHours = entity.ExtraHours
+
+                };
+                return IMasterRepository.InsertRegularization(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateRegularization(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+                    Date = entity.Date,
+                    Shift = entity.Shift,
+                    ExpectedInTime = entity.ExpectedInTime,
+                    PunchInTime = entity.PunchInTime,
+                    ExpectedOutTime = entity.ExpectedOutTime,
+                    @PunchOutTime = entity.PunchOutTime,
+                    @WorkHours = entity.WorkHours,
+                    @ExtraHours = entity.ExtraHours
+
+                };
+                return IMasterRepository.UpdateRegularization(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteRegularization(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteRegularization(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
 

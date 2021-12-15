@@ -88,6 +88,63 @@ namespace FreshersApp.Business.Interface
         Int64 UpdateEmployeeInformation(MasterEntity entity);
 
         Int64 DeleteEmployeeInformation(object filter);
+
+
+        IEnumerable<dynamic>GetAdjustment();
+
+        Int64 InsertAdjustment(MasterEntity entity);
+
+        Int64 UpdateAdjustment(MasterEntity entity);
+
+        Int64 DeleteAdjustment(object filter);
+
+        IEnumerable<dynamic> GetMyAttendenceDetails();
+
+        Int64 InsertMyAttendenceDetails(MasterEntity entity);
+
+        Int64 UpdateMyAttendenceDetails(MasterEntity entity);
+
+        Int64 DeleteMyAttendenceDetails(object filter);
+
+        IEnumerable<dynamic> GetMyOverTimeDetails();
+
+        Int64 InsertMyOverTimeDetails(MasterEntity entity);
+
+        Int64 UpdateMyOverTimeDetails(MasterEntity entity);
+
+        Int64 DeleteMyOverTimeDetails(object filter);
+
+        IEnumerable<dynamic> GetMyLeaveReport();
+
+        Int64 InsertMyLeaveReport(MasterEntity entity);
+
+        Int64 UpdateMyLeaveReport(MasterEntity entity);
+
+        Int64 DeleteMyLeaveReport(object filter);
+
+        IEnumerable<dynamic> GetUserDetails();
+
+        Int64 InsertUserDetails(MasterEntity entity);
+
+        Int64 UpdateUserDetails(MasterEntity entity);
+
+        Int64 DeleteUserDetails(object filter);
+
+        IEnumerable<dynamic> GetMyWeeklyShift();
+
+        Int64 InsertMyWeeklyShift(MasterEntity entity);
+
+        Int64 UpdateMyWeeklyShift(MasterEntity entity);
+
+        Int64 DeleteMyWeeklyShift(object filter);
+
+        IEnumerable<dynamic> GetRegularization();
+
+        Int64 InsertRegularization(MasterEntity entity);
+
+        Int64 UpdateRegularization(MasterEntity entity);
+
+        Int64 DeleteRegularization(object filter);
     }
     
 }

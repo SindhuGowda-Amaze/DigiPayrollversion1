@@ -67,7 +67,40 @@ namespace FreshersApp.Data.Interface
         Int64 UpdateEmployeeInformation(object filter);
         Int64 DeleteEmployeeInformation(object filter);
 
+        IEnumerable<T> GetAdjustment<T>();
+        Int64 InsertAdjustment(object filter);
+        Int64 UpdateAdjustment(object filter);
+        Int64 DeleteAdjustment(object filter);
 
+        IEnumerable<T> GetMyAttendenceDetails<T>();
+        Int64 InsertMyAttendenceDetails(object filter);
+        Int64 UpdateMyAttendenceDetails(object filter);
+        Int64 DeleteMyAttendenceDetails(object filter);
+
+        IEnumerable<T> GetMyOverTimeDetails<T>();
+        Int64 InsertMyOverTimeDetails(object filter);
+        Int64 UpdateMyOverTimeDetails(object filter);
+        Int64 DeleteMyOverTimeDetails(object filter);
+
+        IEnumerable<T> GetMyLeaveReport<T>();
+        Int64 InsertMyLeaveReport(object filter);
+        Int64 UpdateMyLeaveReport(object filter);
+        Int64 DeleteMyLeaveReport(object filter);
+
+        IEnumerable<T> GetUserDetails<T>();
+        Int64 InsertUserDetails(object filter);
+        Int64 UpdateUserDetails(object filter);
+        Int64 DeleteUserDetails(object filter);
+
+        IEnumerable<T> GetMyWeeklyShift<T>();
+        Int64 InsertMyWeeklyShift(object filter);
+        Int64 UpdateMyWeeklyShift(object filter);
+        Int64 DeleteMyWeeklyShift(object filter);
+
+        IEnumerable<T> GetRegularization<T>();
+        Int64 InsertRegularization(object filter);
+        Int64 UpdateRegularization(object filter);
+        Int64 DeleteRegularization(object filter);
 
     }
 

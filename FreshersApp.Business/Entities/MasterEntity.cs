@@ -262,9 +262,28 @@ namespace FreshersApp.Business.Entities
 		public float Monthly_Taxtable4 { get; set; }
 		public float Monthly_Taxtable5 { get; set; }
 		public float Monthly_Taxtable6 { get; set; }
-
-
-
+		public bool Before { get; set; }
+		public float MaxAccumulatedfloat { get; set; }
+		public String Shift { get; set; }
+		public DateTime ExpectedInTime { get; set; }
+		public DateTime PunchInTime { get; set; }
+		public DateTime ExpectedOutTime { get; set; }
+		public DateTime PunchOutTime { get; set; }
+		public DateTime WorkHours { get; set; }
+		public String ExtraHours { get; set; }
+		public String OTHours { get; set; }
+		public String Comments { get; set; }
+		public DateTime FromDate { get; set; }
+		public DateTime TODate { get; set; }
+		public DateTime ShiftDate { get; set; }
+		public DateTime StartTime { get; set; }
+		public DateTime EndTime { get; set; }
+		public String LeaveDaysCount { get; set; }
+		public String LeaveTypeAndReason { get; set; }
+		public String ShiftName { get; set; }
+		public String UserName { get; set; }
+		public String Role { get; set; }
+		public DateTime DateAdded { get; set; }
 
 	}
 }
