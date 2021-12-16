@@ -2490,6 +2490,185 @@ namespace FreshersApp.Business.Managers
                 throw ex;
             }
         }
+
+        public IEnumerable<dynamic> GetCityMaster()
+        {
+            try
+            {
+                return IMasterRepository.GetCityMaster<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertCityMaster(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    CityName=entity.CityName,
+                    ProvinceID=entity.ProvinceID
+                };
+                return IMasterRepository.InsertCityMaster(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        public long UpdateCityMaster(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID=entity.ID,
+                    CityName = entity.CityName,
+                    ProvinceID = entity.ProvinceID
+                };
+                return IMasterRepository.InsertCityMaster(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteCityMaster(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteCityMaster(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<dynamic> GetCountryMaster()
+        {
+            try
+            {
+                return IMasterRepository.GetCountryMaster<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertCountryMaster(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    CountryName=entity.CountryName
+                };
+                return IMasterRepository.InsertCountryMaster(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateCountryMaster(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+                    CountryName = entity.CountryName
+                };
+                return IMasterRepository.InsertCityMaster(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteCountryMaster(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteCountryMaster(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<dynamic> GetProvinceMaster()
+        {
+            try
+            {
+                return IMasterRepository.GetProvinceMaster<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertProvinceMaster(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+
+                    ProvinceName = entity.ProvinceName,
+                    CoutryID = entity.CoutryID
+
+                };
+                return IMasterRepository.InsertProvinceMaster(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateProvinceMaster(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+                    CountryName = entity.CountryName
+                };
+                return IMasterRepository.UpdateProvinceMaster(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteProvinceMaster(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteProvinceMaster(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+       
     }
 }
 

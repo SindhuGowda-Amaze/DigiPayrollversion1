@@ -380,6 +380,11 @@ namespace FreshersApp.Business.Entities
 		public String CitizenShip { get; set; }
 		public String Working_Status { get; set; }
 		public String Request_Type { get; set; }
+		public String CityName { get; set; }
+		public Int64 ProvinceID { get; set; }
+		public String CountryName { get; set; }
+		public String ProvinceName { get; set; }
+		public Int64 CoutryID { get; set; }
 
 	}
 }

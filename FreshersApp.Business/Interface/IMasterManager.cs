@@ -242,6 +242,30 @@ namespace FreshersApp.Business.Interface
         Int64 UpdateDependentDetails(MasterEntity entity);
 
         Int64 DeleteDependentDetails(object filter);
+
+        IEnumerable<dynamic> GetCityMaster();
+
+        Int64 InsertCityMaster(MasterEntity entity);
+
+        Int64 UpdateCityMaster(MasterEntity entity);
+
+        Int64 DeleteCityMaster(object filter);
+
+        IEnumerable<dynamic> GetCountryMaster();
+
+        Int64 InsertCountryMaster(MasterEntity entity);
+
+        Int64 UpdateCountryMaster(MasterEntity entity);
+
+        Int64 DeleteCountryMaster(object filter);
+
+        IEnumerable<dynamic> GetProvinceMaster();
+
+        Int64 InsertProvinceMaster(MasterEntity entity);
+
+        Int64 UpdateProvinceMaster(MasterEntity entity);
+
+        Int64 DeleteProvinceMaster(object filter);
     }
     
 }

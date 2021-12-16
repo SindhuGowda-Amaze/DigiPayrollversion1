@@ -160,6 +160,21 @@ namespace FreshersApp.Data.Interface
         Int64 UpdateDependentDetails(object filter);
         Int64 DeleteDependentDetails(object filter);
 
+        IEnumerable<T> GetCityMaster<T>();
+        Int64 InsertCityMaster(object filter);
+        Int64 UpdateCityMaster(object filter);
+        Int64 DeleteCityMaster(object filter);
+
+        IEnumerable<T> GetCountryMaster<T>();
+        Int64 InsertCountryMaster(object filter);
+        Int64 UpdateCountryMaster(object filter);
+        Int64 DeleteCountryMaster(object filter);
+
+        IEnumerable<T> GetProvinceMaster<T>();
+        Int64 InsertProvinceMaster(object filter);
+        Int64 UpdateProvinceMaster(object filter);
+        Int64 DeleteProvinceMaster(object filter);
+
 
     }
 
