@@ -290,5 +290,96 @@ namespace FreshersApp.Business.Entities
 		public String Pay_Roll_Run_Type { get; set; }
 		public DateTime Transaction_Date { get; set; }
 
+
+
+		public Int64 EmployeeCode { get; set; }
+		public String OfficialEmail { get; set; }
+		public Int64 Band { get; set; }
+		public Int64 Grade { get; set; }
+		public String JobRole { get; set; }
+		public String Manager { get; set; }
+		public String EmployeeType { get; set; }
+		public String EmployeeStatus { get; set; }
+		public Int64 NoticePeriod { get; set; }
+		public Int64 ProbationPeriod { get; set; }
+		public DateTime ConfirmationDueDate { get; set; }
+		public String ConfirmationStatus { get; set; }
+		public String EmployeeName { get; set; }
+		public String Holiday { get; set; }
+		public String HolidayDescription { get; set; }
+		public DateTime HolidayDate { get; set; }
+		public String Attachment { get; set; }
+		public String ComapanyName { get; set; }
+		public String Title { get; set; }
+		public DateTime StartDate { get; set; }
+		public DateTime EndDate { get; set; }
+		public float Salary { get; set; }
+		public bool CurrentEmployer { get; set; }
+		public String EducationType { get; set; }
+		public String Qualification { get; set; }
+		public String NameOfQualification { get; set; }
+		public String Branch { get; set; }
+		public String InstitutionName { get; set; }
+		public String Country { get; set; }
+		public String ScoreType { get; set; }
+		public DateTime StartDateMonth { get; set; }
+		public DateTime StartDateYear { get; set; }
+		public DateTime EndDateMonth { get; set; }
+		public DateTime EndDateYear { get; set; }
+		public String Middle_Name { get; set; }
+		public String Last_Name { get; set; }
+		public String PlaceO_f_Birth { get; set; }
+		public String Country_Of_Birth { get; set; }
+		public String Age { get; set; }
+		public DateTime Date_Of_Marriage { get; set; }
+		public String Personal_Email { get; set; }
+		public String Mobile { get; set; }
+		public String Religion { get; set; }
+		public String Citizen_Ship { get; set; }
+		public String Ethnicity { get; set; }
+		public String Nationality { get; set; }
+		public bool Is_Disabled { get; set; }
+		public String Blood_Group { get; set; }
+		public float Height { get; set; }
+		public float Weight { get; set; }
+		public String MajorIllness { get; set; }
+		public bool IS_Night_Blind { get; set; }
+		public bool Is_Color_Blind { get; set; }
+		public String Designation { get; set; }
+		public String PayRateType { get; set; }
+		public String PayStructure { get; set; }
+		public DateTime EffectiveFromDate { get; set; }
+		public String Reason { get; set; }
+		public String NameOfBank { get; set; }
+		public String AccountHolderName { get; set; }
+		public String BankAccountNumber { get; set; }
+		public String VisaType { get; set; }
+		public String VisaNumber { get; set; }
+		public DateTime VisaIssueDate { get; set; }
+		public DateTime VisaExpiryDate { get; set; }
+		public String IDType { get; set; }
+		public String Number { get; set; }
+		public String NameOnDocument { get; set; }
+		public DateTime IssueDate { get; set; }
+		public DateTime ExpiryDate { get; set; }
+		public String IssuingAuthority { get; set; }
+		public String PlaceOfIssue { get; set; }
+		public String Dependent { get; set; }
+		public String Percentage { get; set; }
+		public String NomineeType { get; set; }
+		public String GuardianName { get; set; }
+		public String GuardianRelationship { get; set; }
+		public String DependentName { get; set; }
+		public String Relationship { get; set; }
+		public DateTime DateOfBirth { get; set; }
+		public String Address { get; set; }
+		public bool Is_Dependent { get; set; }
+		public String Id_Number { get; set; }
+		public bool Is_Child_Adopted { get; set; }
+		public String Race { get; set; }
+		public String CitizenShip { get; set; }
+		public String Working_Status { get; set; }
+		public String Request_Type { get; set; }
+
 	}
 }

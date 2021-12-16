@@ -107,6 +107,60 @@ namespace FreshersApp.Data.Interface
         Int64 UpdatePayroll(object filter);
         Int64 DeletePayroll(object filter);
 
+        IEnumerable<T> GetPositionDetails<T>();
+        Int64 InsertPositionDetails(object filter);
+        Int64 UpdatePositionDetails(object filter);
+        Int64 DeletePositionDetails(object filter);
+
+
+        IEnumerable<T> GetEmployementDetails<T>();
+        Int64 InsertEmployementDetails(object filter);
+        Int64 UpdateEmployementDetails(object filter);
+        Int64 DeleteEmployementDetails(object filter);
+
+        IEnumerable<T> GetEducationDetails<T>();
+        Int64 InsertEducationDetails(object filter);
+        Int64 UpdateEducationDetails(object filter);
+        Int64 DeleteEducationDetails(object filter);
+
+        IEnumerable<T> GetMyDetails<T>();
+        Int64 InsertMyDetails(object filter);
+        Int64 UpdateMyDetails(object filter);
+        Int64 DeleteMyDetails(object filter);
+
+        IEnumerable<T> GetSalaryDetails<T>();
+        Int64 InsertSalaryDetails(object filter);
+        Int64 UpdateSalaryDetails(object filter);
+        Int64 DeleteSalaryDetails(object filter);
+
+        IEnumerable<T> GetBankDetails<T>();
+        Int64 InsertBankDetails(object filter);
+        Int64 UpdateBankDetails(object filter);
+        Int64 DeleteBankDetails(object filter);
+
+
+        IEnumerable<T> GetVisaDetails<T>();
+        Int64 InsertVisaDetails(object filter);
+        Int64 UpdateVisaDetails(object filter);
+        Int64 DeleteVisaDetails(object filter);
+
+
+        IEnumerable<T> GetID_Details<T>();
+        Int64 InsertID_Details(object filter);
+        Int64 UpdateID_Details(object filter);
+        Int64 DeleteID_Details(object filter);
+
+        IEnumerable<T> GetNomination<T>();
+        Int64 InsertNomination(object filter);
+        Int64 UpdateNomination(object filter);
+        Int64 DeleteNomination(object filter);
+
+        IEnumerable<T> GetDependentDetails<T>();
+        Int64 InsertDependentDetails(object filter);
+        Int64 UpdateDependentDetails(object filter);
+        Int64 DeleteDependentDetails(object filter);
+
+
     }
 
 }

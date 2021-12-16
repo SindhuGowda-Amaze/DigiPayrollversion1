@@ -1713,6 +1713,783 @@ namespace FreshersApp.Business.Managers
                 throw ex;
             }
         }
+
+
+        public IEnumerable<dynamic> GetPositionDetails()
+        {
+            try
+            {
+                return IMasterRepository.GetPositionDetails<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertPositionDetails(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+
+                    EmployeeCode = entity.EmployeeCode,
+                    OfficialEmail = entity.OfficialEmail,
+                    Band = entity.Band,
+                    Grade = entity.Grade,
+                    JobRole = entity.JobRole,
+                    Manager = entity.Manager,
+                    EmployeeType = entity.EmployeeType,
+                    EmployeeStatus = entity.EmployeeStatus,
+                    NoticePeriod = entity.NoticePeriod,
+                    ProbationPeriod = entity.ProbationPeriod,
+                    ConfirmationDueDate = entity.ConfirmationDueDate,
+                    ConfirmationStatus = entity.ConfirmationStatus,
+                    EmployeeName = entity.EmployeeName
+
+                };
+                return IMasterRepository.InsertPositionDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        public long UpdatePositionDetails(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+
+                    EmployeeCode = entity.EmployeeCode,
+                    OfficialEmail = entity.OfficialEmail,
+                    Band = entity.Band,
+                    Grade = entity.Grade,
+                    JobRole = entity.JobRole,
+                    Manager = entity.Manager,
+                    EmployeeType = entity.EmployeeType,
+                    EmployeeStatus = entity.EmployeeStatus,
+                    NoticePeriod = entity.NoticePeriod,
+                    ProbationPeriod = entity.ProbationPeriod,
+                    ConfirmationDueDate = entity.ConfirmationDueDate,
+                    ConfirmationStatus = entity.ConfirmationStatus,
+                    EmployeeName = entity.EmployeeName
+
+                };
+                return IMasterRepository.UpdatePositionDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeletePositionDetails(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeletePositionDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+
+        public IEnumerable<dynamic> GetEmployementDetails()
+        {
+            try
+            {
+                return IMasterRepository.GetEmployementDetails<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertEmployementDetails(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+
+                    ComapanyName = entity.ComapanyName,
+                    Title = entity.Title,
+                    StartDate = entity.StartDate,
+                    EndDate = entity.EndDate,
+                    Salary = entity.Salary,
+                    CurrentEmployer = entity.CurrentEmployer
+
+                };
+                return IMasterRepository.InsertEmployementDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        public long UpdateEmployementDetails(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+
+                    ComapanyName = entity.ComapanyName,
+                    Title = entity.Title,
+                    StartDate = entity.StartDate,
+                    EndDate = entity.EndDate,
+                    Salary = entity.Salary,
+                    CurrentEmployer = entity.CurrentEmployer
+
+                };
+                return IMasterRepository.UpdateEmployementDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteEmployementDetails(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteEmployementDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<dynamic> GetEducationDetails()
+        {
+            try
+            {
+                return IMasterRepository.GetEducationDetails<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertEducationDetails(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+
+                    EducationType = entity.EducationType,
+                    Qualification = entity.Qualification,
+                    NameOfQualification = entity.NameOfQualification,
+                    Branch = entity.Branch,
+                    InstitutionName = entity.InstitutionName,
+                    Country = entity.Country,
+                    ScoreType = entity.ScoreType,
+                    Grade = entity.Grade,
+                    StartDateMonth = entity.StartDateMonth,
+                    StartDateYear = entity.StartDateYear,
+                    EndDateMonth = entity.EndDateMonth,
+                    EndDateYear = entity.EndDateYear
+
+                };
+                return IMasterRepository.InsertEducationDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        public long UpdateEducationDetails(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+
+                    EducationType = entity.EducationType,
+                    Qualification = entity.Qualification,
+                    NameOfQualification = entity.NameOfQualification,
+                    Branch = entity.Branch,
+                    InstitutionName = entity.InstitutionName,
+                    Country = entity.Country,
+                    ScoreType = entity.ScoreType,
+                    Grade = entity.Grade,
+                    StartDateMonth = entity.StartDateMonth,
+                    StartDateYear = entity.StartDateYear,
+                    EndDateMonth = entity.EndDateMonth,
+                    EndDateYear = entity.EndDateYear
+
+                };
+                return IMasterRepository.UpdateEducationDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteEducationDetails(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteEducationDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<dynamic> GetMyDetails()
+        {
+            try
+            {
+                return IMasterRepository.GetMyDetails<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertMyDetails(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+
+                    Title = entity.Title,
+                    Name = entity.Name,
+                    Middle_Name = entity.Middle_Name,
+                    Last_Name = entity.Last_Name,
+                    PlaceO_f_Birth = entity.PlaceO_f_Birth,
+                    Country_Of_Birth = entity.Country_Of_Birth,
+                    Age = entity.Age,
+                    Gender = entity.Gender,
+                    Status = entity.Status,
+                    Date_Of_Marriage = entity.Date_Of_Marriage,
+                    Personal_Email = entity.Personal_Email,
+                    Mobile = entity.Mobile,
+                    Religion = entity.Religion,
+                    Citizen_Ship = entity.Citizen_Ship,
+                    Ethnicity = entity.Ethnicity,
+                    Nationality = entity.Nationality,
+                    Is_Disabled = entity.Is_Disabled,
+                    Blood_Group = entity.Blood_Group,
+                    Height = entity.Height,
+                    Weight = entity.Weight,
+                    MajorIllness = entity.MajorIllness,
+                    IS_Night_Blind = entity.IS_Night_Blind,
+                    Is_Color_Blind = entity.Is_Color_Blind
+
+                };
+                return IMasterRepository.InsertMyDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateMyDetails(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+
+                    Title = entity.Title,
+                    Name = entity.Name,
+                    Middle_Name = entity.Middle_Name,
+                    Last_Name = entity.Last_Name,
+                    PlaceO_f_Birth = entity.PlaceO_f_Birth,
+                    Country_Of_Birth = entity.Country_Of_Birth,
+                    Age = entity.Age,
+                    Gender = entity.Gender,
+                    Status = entity.Status,
+                    Date_Of_Marriage = entity.Date_Of_Marriage,
+                    Personal_Email = entity.Personal_Email,
+                    Mobile = entity.Mobile,
+                    Religion = entity.Religion,
+                    Citizen_Ship = entity.Citizen_Ship,
+                    Ethnicity = entity.Ethnicity,
+                    Nationality = entity.Nationality,
+                    Is_Disabled = entity.Is_Disabled,
+                    Blood_Group = entity.Blood_Group,
+                    Height = entity.Height,
+                    Weight = entity.Weight,
+                    MajorIllness = entity.MajorIllness,
+                    IS_Night_Blind = entity.IS_Night_Blind,
+                    Is_Color_Blind = entity.Is_Color_Blind
+
+                };
+                return IMasterRepository.UpdateMyDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteMyDetails(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteMyDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<dynamic> GetSalaryDetails()
+        {
+            try
+            {
+                return IMasterRepository.GetSalaryDetails<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertSalaryDetails(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+
+                    EmployeeName = entity.EmployeeName,
+                    Grade = entity.Grade,
+                    Designation = entity.Designation,
+                    PayRateType = entity.PayRateType,
+                    PayStructure = entity.PayStructure,
+                    EffectiveFromDate = entity.EffectiveFromDate,
+                    Reason = entity.Reason
+
+                };
+                return IMasterRepository.InsertSalaryDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateSalaryDetails(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+
+                    EmployeeName = entity.EmployeeName,
+                    Grade = entity.Grade,
+                    Designation = entity.Designation,
+                    PayRateType = entity.PayRateType,
+                    PayStructure = entity.PayStructure,
+                    EffectiveFromDate = entity.EffectiveFromDate,
+                    Reason = entity.Reason
+
+                };
+                return IMasterRepository.UpdateSalaryDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteSalaryDetails(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteSalaryDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<dynamic> GetBankDetails()
+        {
+            try
+            {
+                return IMasterRepository.GetBankDetails<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertBankDetails(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+
+                    NameOfBank = entity.NameOfBank,
+                    AccountHolderName = entity.AccountHolderName,
+                    BankAccountNumber = entity.BankAccountNumber
+
+                };
+                return IMasterRepository.InsertBankDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateBankDetails(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+
+                    NameOfBank = entity.NameOfBank,
+                    AccountHolderName = entity.AccountHolderName,
+                    BankAccountNumber = entity.BankAccountNumber
+
+                };
+                return IMasterRepository.UpdateBankDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteBankDetails(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteBankDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<dynamic> GetVisaDetails()
+        {
+            try
+            {
+                return IMasterRepository.GetVisaDetails<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertVisaDetails(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+
+                    VisaType = entity.VisaType,
+                    VisaNumber = entity.VisaNumber,
+                    VisaIssueDate = entity.VisaIssueDate,
+                    VisaExpiryDate = entity.VisaExpiryDate
+
+                };
+                return IMasterRepository.InsertVisaDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateVisaDetails(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+
+                    VisaType = entity.VisaType,
+                    VisaNumber = entity.VisaNumber,
+                    VisaIssueDate = entity.VisaIssueDate,
+                    VisaExpiryDate = entity.VisaExpiryDate
+
+                };
+                return IMasterRepository.UpdateVisaDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteVisaDetails(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteVisaDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<dynamic> GetID_Details()
+        {
+            try
+            {
+                return IMasterRepository.GetID_Details<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertID_Details(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+
+                    IDType=entity.IDType,
+                    Number = entity.Number,
+                    NameOnDocument = entity.NameOnDocument,
+                    IssueDate = entity.IssueDate,
+                    ExpiryDate = entity.ExpiryDate,
+                    IssuingAuthority = entity.IssuingAuthority,
+                    PlaceOfIssue = entity.PlaceOfIssue
+                };
+                return IMasterRepository.InsertID_Details(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateID_Details(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+                    IDType = entity.IDType,
+                    Number = entity.Number,
+                    NameOnDocument = entity.NameOnDocument,
+                    IssueDate = entity.IssueDate,
+                    ExpiryDate = entity.ExpiryDate,
+                    IssuingAuthority = entity.IssuingAuthority,
+                    PlaceOfIssue = entity.PlaceOfIssue
+                };
+                return IMasterRepository.UpdateID_Details(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteID_Details(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteID_Details(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<dynamic> GetNomination()
+        {
+            try
+            {
+                return IMasterRepository.GetNomination<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertNomination(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    Dependent = entity.Dependent,
+                    Percentage = entity.Percentage,
+                    NomineeType = entity.NomineeType,
+                    GuardianName = entity.GuardianName,
+                    GuardianRelationship = entity.GuardianRelationship
+                };
+                return IMasterRepository.InsertNomination(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateNomination(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+                    Dependent = entity.Dependent,
+                    Percentage = entity.Percentage,
+                    NomineeType = entity.NomineeType,
+                    GuardianName = entity.GuardianName,
+                    GuardianRelationship = entity.GuardianRelationship
+                 
+                };
+                return IMasterRepository.UpdateNomination(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteNomination(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteNomination(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<dynamic> GetDependentDetails()
+        {
+            try
+            {
+                return IMasterRepository.GetDependentDetails<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertDependentDetails(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    DependentName = entity.DependentName,
+                    Relationship = entity.Relationship,
+                    Gender = entity.Gender,
+                    DateOfBirth = entity.DateOfBirth,
+                    Address = entity.Address,
+                    Mobile = entity.Mobile,
+                    Is_Dependent = entity.Is_Dependent,
+                    Id_Number = entity.Id_Number,
+                    Is_Child_Adopted = entity.Is_Child_Adopted,
+                    Race = entity.Race,
+                    CitizenShip = entity.CitizenShip,
+                    Country_Of_Birth = entity.Country_Of_Birth,
+                    Religion = entity.Religion,
+                    Working_Status = entity.Working_Status,
+                    Request_Type = entity.Request_Type
+                };
+                return IMasterRepository.InsertDependentDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateDependentDetails(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+                    DependentName = entity.DependentName,
+                    Relationship = entity.Relationship,
+                    Gender = entity.Gender,
+                    DateOfBirth = entity.DateOfBirth,
+                    Address = entity.Address,
+                    Mobile = entity.Mobile,
+                    Is_Dependent = entity.Is_Dependent,
+                    Id_Number = entity.Id_Number,
+                    Is_Child_Adopted = entity.Is_Child_Adopted,
+                    Race = entity.Race,
+                    CitizenShip = entity.CitizenShip,
+                    Country_Of_Birth = entity.Country_Of_Birth,
+                    Religion = entity.Religion,
+                    Working_Status = entity.Working_Status,
+                    Request_Type = entity.Request_Type
+
+                };
+                return IMasterRepository.UpdateDependentDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteDependentDetails(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteDependentDetails(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
 

@@ -153,6 +153,95 @@ namespace FreshersApp.Business.Interface
         Int64 UpdatePayroll(MasterEntity entity);
 
         Int64 DeletePayroll(object filter);
+
+
+
+        IEnumerable<dynamic> GetPositionDetails();
+
+        Int64 InsertPositionDetails(MasterEntity entity);
+
+        Int64 UpdatePositionDetails(MasterEntity entity);
+
+        Int64 DeletePositionDetails(object filter);
+
+
+        IEnumerable<dynamic> GetEmployementDetails();
+
+        Int64 InsertEmployementDetails(MasterEntity entity);
+
+        Int64 UpdateEmployementDetails(MasterEntity entity);
+
+        Int64 DeleteEmployementDetails(object filter);
+
+
+        IEnumerable<dynamic> GetEducationDetails();
+
+        Int64 InsertEducationDetails(MasterEntity entity);
+
+        Int64 UpdateEducationDetails(MasterEntity entity);
+
+        Int64 DeleteEducationDetails(object filter);
+
+
+        IEnumerable<dynamic> GetMyDetails();
+
+        Int64 InsertMyDetails(MasterEntity entity);
+
+        Int64 UpdateMyDetails(MasterEntity entity);
+
+        Int64 DeleteMyDetails(object filter);
+
+
+        IEnumerable<dynamic> GetSalaryDetails();
+
+        Int64 InsertSalaryDetails(MasterEntity entity);
+
+        Int64 UpdateSalaryDetails(MasterEntity entity);
+
+        Int64 DeleteSalaryDetails(object filter);
+
+
+        IEnumerable<dynamic> GetBankDetails();
+
+        Int64 InsertBankDetails(MasterEntity entity);
+
+        Int64 UpdateBankDetails(MasterEntity entity);
+
+        Int64 DeleteBankDetails(object filter);
+
+
+        IEnumerable<dynamic> GetVisaDetails();
+
+        Int64 InsertVisaDetails(MasterEntity entity);
+
+        Int64 UpdateVisaDetails(MasterEntity entity);
+
+        Int64 DeleteVisaDetails(object filter);
+
+
+        IEnumerable<dynamic> GetID_Details();
+
+        Int64 InsertID_Details(MasterEntity entity);
+
+        Int64 UpdateID_Details(MasterEntity entity);
+
+        Int64 DeleteID_Details(object filter);
+
+        IEnumerable<dynamic> GetNomination();
+
+        Int64 InsertNomination(MasterEntity entity);
+
+        Int64 UpdateNomination(MasterEntity entity);
+
+        Int64 DeleteNomination(object filter);
+
+        IEnumerable<dynamic> GetDependentDetails();
+
+        Int64 InsertDependentDetails(MasterEntity entity);
+
+        Int64 UpdateDependentDetails(MasterEntity entity);
+
+        Int64 DeleteDependentDetails(object filter);
     }
     
 }
