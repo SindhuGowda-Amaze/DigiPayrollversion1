@@ -11,10 +11,10 @@ namespace FreshersApp.Business.Entities
 
 		public string Changes { get; set; }
 		public string ModifiedBy { get; set; }
-		public Int64 Monthly_Basic_Salary_Into_Five { get; set; }
-		public Int64 Monthly_Share { get; set; }
-		public Int64 Personal_Share { get; set; }
-		public Int64 Employee_Share { get; set; }
+		public string Monthly_Basic_Salary_Into_Five { get; set; }
+		public string Monthly_Share { get; set; }
+		public string Personal_Share { get; set; }
+		public string Employee_Share { get; set; }
 		public bool BeforeTax { get; set; }
 		public float Amount { get; set; }
 		public bool Taxable { get; set; }
@@ -121,16 +121,16 @@ namespace FreshersApp.Business.Entities
 
 
 
-		public Int64 Min_Range { get; set; }
-		public Int64 Max_Range { get; set; }
-		public Int64 Monthly_Salary_Creadited { get; set; }
-		public Int64 SS_ER { get; set; }
-		public Int64 SS_EE { get; set; }
-		public Int64 SS_Total { get; set; }
-		public Int64 MPF_ER { get; set; }
-		public Int64 MPF_EE { get; set; }
-		public Int64 EC_ER { get; set; }
-		public Int64 Total_Contribution { get; set; }
+		public float Min_Range { get; set; }
+		public float Max_Range { get; set; }
+		public float Monthly_Salary_Creadited { get; set; }
+		public float SS_ER { get; set; }
+		public float SS_EE { get; set; }
+		public float SS_Total { get; set; }
+		public float MPF_ER { get; set; }
+		public float MPF_EE { get; set; }
+		public float EC_ER { get; set; }
+		public float Total_Contribution { get; set; }
 
 
 		public string EmployeeID { get; set; }
@@ -178,11 +178,11 @@ namespace FreshersApp.Business.Entities
 		public float LeaveCredit { get; set; }
 		public string Dependent1 { get; set; }
 		public DateTime Dependent1_DOB { get; set; }
-		public string @Dependent2 { get; set; }
+		public string Dependent2 { get; set; }
 		public DateTime Dependent2_DOB { get; set; }
-		public string @Dependent3 { get; set; }
+		public string Dependent3 { get; set; }
 		public DateTime Dependent3_DOB { get; set; }
-		public string @Dependent4 { get; set; }
+		public string Dependent4 { get; set; }
 		public DateTime Dependent4_DOB { get; set; }
 		public string bank { get; set; }
 		public string bank_AccountType { get; set; }
@@ -284,8 +284,8 @@ namespace FreshersApp.Business.Entities
 		public String UserName { get; set; }
 		public String Role { get; set; }
 		public DateTime DateAdded { get; set; }
-		public DateTime Year { get; set; }
-		public DateTime Month { get; set; }
+		public String Year { get; set; }
+		public String Month { get; set; }
 		public Int64 Period { get; set; }
 		public String Pay_Roll_Run_Type { get; set; }
 		public DateTime Transaction_Date { get; set; }
@@ -384,7 +384,31 @@ namespace FreshersApp.Business.Entities
 		public Int64 ProvinceID { get; set; }
 		public String CountryName { get; set; }
 		public String ProvinceName { get; set; }
+		public String IsActive { get; set; }
+		public String IsTotal { get; set; }
+		public String IsLocked { get; set; }
+		public String Short { get; set; }
+		public String AnnualQuota { get; set; }
+		public String CarriedForward { get; set; }
+		public String EntitlementTillDate { get; set; }
+		public String AvailedTillDate { get; set; }
+		public String Current_Balance { get; set; }
 		public Int64 CoutryID { get; set; }
+		public String From { get; set; }
+		public String To { get; set; }
+		public String Fix { get; set; }
+		public String Rate { get; set; }
+
+		public Int64 SL_No { get; set; }
+		public String LeaveType { get; set; }
+		//public Int64 AnnualQuota { get; set; }
+		//public Int64 CarriedForward { get; set; }
+		//public Int64 EntitlementTillDate { get; set; }
+		//public Int64 AvailedTillDate { get; set; }
+		public Int64 CurrentBalance { get; set; }
+		public String LeaveReason { get; set; }
+		public String LeaveStage { get; set; }
+		public String LeaveStatus { get; set; }
 
 	}
 }

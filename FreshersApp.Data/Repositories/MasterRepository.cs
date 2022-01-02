@@ -298,7 +298,7 @@ namespace FreshersApp.Data.Repositories
         {
             try
             {
-                return db.Query<T>("[dbo].[Spro_GetBanks]", commandType: CommandType.StoredProcedure);
+                return db.Query<T>("[dbo].[SProc_GetBanks]", commandType: CommandType.StoredProcedure);
             }
             catch (Exception ex)
             {
@@ -309,7 +309,7 @@ namespace FreshersApp.Data.Repositories
         {
             try
             {
-                return db.Query<Int64>("[dbo].[Sproc_InsertBanks]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+                return db.Query<Int64>("[dbo].[SProc_InsertBanks]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
             }
             catch (Exception ex)
             {
@@ -320,7 +320,7 @@ namespace FreshersApp.Data.Repositories
         {
             try
             {
-                return db.Query<Int64>("[dbo].[Sproc_UpdateBanks]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+                return db.Query<Int64>("[dbo].[SProc_UpdateBanks]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
             }
             catch (Exception ex)
             {
@@ -331,7 +331,7 @@ namespace FreshersApp.Data.Repositories
         {
             try
             {
-                return db.Query<Int64>("[dbo].[Sproc_DeleteBanks]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+                return db.Query<Int64>("[dbo].[SProc_DeleteBanks]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
             }
             catch (Exception ex)
             {
@@ -344,7 +344,7 @@ namespace FreshersApp.Data.Repositories
         {
             try
             {
-                return db.Query<T>("[dbo].[Spro_GetPayGroup]", commandType: CommandType.StoredProcedure);
+                return db.Query<T>("[dbo].[SProc_GetPayGroup]", commandType: CommandType.StoredProcedure);
             }
             catch (Exception ex)
             {
@@ -355,7 +355,7 @@ namespace FreshersApp.Data.Repositories
         {
             try
             {
-                return db.Query<Int64>("[dbo].[Sproc_InsertPayGroup]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+                return db.Query<Int64>("[dbo].[SProc_InsertPayGroup]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
             }
             catch (Exception ex)
             {
@@ -366,7 +366,7 @@ namespace FreshersApp.Data.Repositories
         {
             try
             {
-                return db.Query<Int64>("[dbo].[Sproc_UpdatePayGroup]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+                return db.Query<Int64>("[dbo].[SProc_UpdatePayGroup]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
             }
             catch (Exception ex)
             {
@@ -377,7 +377,7 @@ namespace FreshersApp.Data.Repositories
         {
             try
             {
-                return db.Query<Int64>("[dbo].[Sproc_DeletePayGroup]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+                return db.Query<Int64>("[dbo].[SProc_DeletePayGroup]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
             }
             catch (Exception ex)
             {
@@ -653,7 +653,7 @@ namespace FreshersApp.Data.Repositories
         {
             try
             {
-                return db.Query<T>("[dbo].[SProc_GetAdjustment]", commandType: CommandType.StoredProcedure);
+                return db.Query<T>("[dbo].[SProc_GetMyOverTimeDetails]", commandType: CommandType.StoredProcedure);
             }
             catch (Exception ex)
             {
@@ -751,7 +751,7 @@ namespace FreshersApp.Data.Repositories
         {
             try
             {
-                return db.Query<T>("[dbo].[SProc_GetMyLeaveReport]", commandType: CommandType.StoredProcedure);
+                return db.Query<T>("[dbo].[SProc_GetUserDetails]", commandType: CommandType.StoredProcedure);
             }
             catch (Exception ex)
             {
@@ -799,7 +799,7 @@ namespace FreshersApp.Data.Repositories
         {
             try
             {
-                return db.Query<T>("[dbo].[SProc_GetMyLeaveReport]", commandType: CommandType.StoredProcedure);
+                return db.Query<T>("[dbo].[SProc_GetMyWeeklyShift]", commandType: CommandType.StoredProcedure);
             }
             catch (Exception ex)
             {
@@ -847,7 +847,7 @@ namespace FreshersApp.Data.Repositories
         {
             try
             {
-                return db.Query<T>("[dbo].[SProc_GetMyLeaveReport]", commandType: CommandType.StoredProcedure);
+                return db.Query<T>("[dbo].[SProc_GetRegularization]", commandType: CommandType.StoredProcedure);
             }
             catch (Exception ex)
             {
@@ -931,7 +931,7 @@ namespace FreshersApp.Data.Repositories
         {
             try
             {
-                return db.Query<Int64>("[dbo].[SProc_DeleteRegularization]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+                return db.Query<Int64>("[dbo].[SProc_DeletePayroll]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
             }
             catch (Exception ex)
             {
@@ -1560,6 +1560,279 @@ namespace FreshersApp.Data.Repositories
             try
             {
                 return db.Query<Int64>("[dbo].[SProc_DeleteProvinceMaster]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateCompany_Profile(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_UpdateCompany_Profile]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<T> GetTaxtableAnnual<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[SProc_GetTaxtableAnnual]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertTaxtableAnnual(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("SProc_InsertTaxtableAnnual", filter, commandType: System.Data.CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateTaxtableAnnual(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_UpdateTaxtableAnnual]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long DeleteTaxtableAnnual(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_DeleteTaxtableAnnual]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<T> GetLeaveBalance<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[SProc_GetLeaveBalance]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertLeaveBalance(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_InsertLeaveBalance]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateLeaveBalance(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_UpdateLeaveBalance]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteLeaveBalance(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_DeleteLeaveBalance]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //Digiofficeversion4//
+
+        public long DeleteCityType(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_DeleteCityType]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteCountryType(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_DeleteCountryType]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteHolidays(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_DeleteHolidays]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteLeaveType(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_DeleteLeaveType]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteShiftMaster(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_DeleteShiftMaster]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteStateType(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_DeleteStateType]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteTransportRequestType(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_DeleteTransportRequestType]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteWorkStationType_Master(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_DeleteProvinceMaster]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<T> GetEntitlementMaster<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[SProc_GetEntitlementMaster]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertEntitlementMaster(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_InsertEntitlementMaster]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateEntitlementMaster(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_UpdateEntitlementMaster]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteEntitlementMaster(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_DeleteEntitlementMaster]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
             }
             catch (Exception ex)
             {

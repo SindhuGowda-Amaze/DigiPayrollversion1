@@ -41,7 +41,7 @@ namespace FreshersApp.Business.Interface
         IEnumerable<dynamic> GetCompanyProfile();
         Int64 InsertCompany_Profile(MasterEntity entity);
         Int64 DeleteCompanyProfile(object filter);
-
+        Int64 UpdateCompany_Profile(MasterEntity entity);
 
         IEnumerable<dynamic> GetSSS();
 
@@ -266,6 +266,65 @@ namespace FreshersApp.Business.Interface
         Int64 UpdateProvinceMaster(MasterEntity entity);
 
         Int64 DeleteProvinceMaster(object filter);
+
+
+        IEnumerable<dynamic> GetTaxtableAnnual();
+        Int64 InsertTaxtableAnnual(MasterEntity Entity);
+        Int64 UpdateTaxtableAnnual(MasterEntity entity);
+        Int64 DeleteTaxtableAnnual(object filter);
+
+
+        IEnumerable<dynamic> GetLeaveBalance();
+
+        Int64 InsertLeaveBalance(MasterEntity entity);
+
+        Int64 UpdateLeaveBalance(MasterEntity entity);
+
+        Int64 DeleteLeaveBalance(object filter);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //Digiofficeversion4//
+        Int64 DeleteCityType(object filter);
+        Int64 DeleteCountryType(object filter);
+        Int64 DeleteHolidays(object filter);
+        Int64 DeleteLeaveType(object filter);
+        Int64 DeleteShiftMaster(object filter);
+        Int64 DeleteStateType(object filter);
+        Int64 DeleteTransportRequestType(object filter);
+        Int64 DeleteWorkStationType_Master(object filter);
+
+
+
+
+        IEnumerable<dynamic> GetEntitlementMaster();
+
+        Int64 InsertEntitlementMaster(MasterEntity entity);
+
+        Int64 UpdateEntitlementMaster(MasterEntity entity);
+
+        Int64 DeleteEntitlementMaster(object filter);
+
     }
     
 }

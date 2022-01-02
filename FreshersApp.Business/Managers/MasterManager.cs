@@ -1176,7 +1176,7 @@ namespace FreshersApp.Business.Managers
                     MaxAccumulated = entity.MaxAccumulatedfloat
 
                 };
-                return IMasterRepository.InsertGovernmentRecords(filter);
+                return IMasterRepository.InsertAdjustment(filter);
             }
             catch (Exception ex)
             {
@@ -1201,7 +1201,7 @@ namespace FreshersApp.Business.Managers
                     MaxAccumulated = entity.MaxAccumulatedfloat
 
                 };
-                return IMasterRepository.InsertGovernmentRecords(filter);
+                return IMasterRepository.UpdateAdjustment(filter);
             }
             catch (Exception ex)
             {
@@ -1321,7 +1321,7 @@ namespace FreshersApp.Business.Managers
                     Status=entity.Status
 
                 };
-                return IMasterRepository.UpdateMyAttendenceDetails(filter);
+                return IMasterRepository.InsertMyOverTimeDetails(filter);
             }
             catch (Exception ex)
             {
@@ -1343,7 +1343,7 @@ namespace FreshersApp.Business.Managers
                     Status = entity.Status
 
                 };
-                return IMasterRepository.UpdateMyAttendenceDetails(filter);
+                return IMasterRepository.UpdateMyOverTimeDetails(filter);
             }
             catch (Exception ex)
             {
@@ -1384,10 +1384,12 @@ namespace FreshersApp.Business.Managers
 
                     FromDate = entity.FromDate,
                     TODate = entity.TODate,
-                    LeaveTypeAndReason = entity.LeaveTypeAndReason,
+                    LeaveType = entity.LeaveType,
+                    LeaveReason = entity.LeaveReason,
                     LeaveDaysCount = entity.LeaveDaysCount,
-                    Comments = entity.Comments,
-                    Status = entity.Status
+                    LeaveStage = entity.LeaveStage,
+                    LeaveStatus = entity.LeaveStatus
+
 
                 };
                 return IMasterRepository.InsertMyLeaveReport(filter);
@@ -1407,10 +1409,11 @@ namespace FreshersApp.Business.Managers
                     ID = entity.ID,
                     FromDate = entity.FromDate,
                     TODate = entity.TODate,
-                    LeaveTypeAndReason = entity.LeaveTypeAndReason,
+                    LeaveType = entity.LeaveType,
+                    LeaveReason = entity.LeaveReason,
                     LeaveDaysCount = entity.LeaveDaysCount,
-                    Comments = entity.Comments,
-                    Status = entity.Status
+                    LeaveStage = entity.LeaveStage,
+                    LeaveStatus = entity.LeaveStatus
 
                 };
                 return IMasterRepository.UpdateMyLeaveReport(filter);
@@ -1456,10 +1459,12 @@ namespace FreshersApp.Business.Managers
                     Email = entity.Email,
                     Role = entity.Role,
                     DateAdded = entity.DateAdded,
-                   
+                    IsActive=entity.IsActive,
+                    IsTotal=entity.IsTotal,
+                    IsLocked=entity.IsLocked
 
                 };
-                return IMasterRepository.UpdateMyLeaveReport(filter);
+                return IMasterRepository.InsertUserDetails(filter);
             }
             catch (Exception ex)
             {
@@ -1480,7 +1485,7 @@ namespace FreshersApp.Business.Managers
                     DateAdded = entity.DateAdded,
 
                 };
-                return IMasterRepository.UpdateMyLeaveReport(filter);
+                return IMasterRepository.UpdateUserDetails(filter);
             }
             catch (Exception ex)
             {
@@ -1526,7 +1531,7 @@ namespace FreshersApp.Business.Managers
                    
 
                 };
-                return IMasterRepository.UpdateMyLeaveReport(filter);
+                return IMasterRepository.InsertMyWeeklyShift(filter);
             }
             catch (Exception ex)
             {
@@ -1547,7 +1552,7 @@ namespace FreshersApp.Business.Managers
                     EndTime = entity.EndTime,
 
                 };
-                return IMasterRepository.UpdateMyLeaveReport(filter);
+                return IMasterRepository.UpdateMyWeeklyShift(filter);
             }
             catch (Exception ex)
             {
@@ -1665,11 +1670,12 @@ namespace FreshersApp.Business.Managers
                     Period = entity.Period,
                     Pay_Roll_Run_Type = entity.Pay_Roll_Run_Type,
                     Pay_Group = entity.Pay_Group,
-                    PunchOutTime = entity.PunchOutTime,
+                    Description = entity.Description,
                     Transaction_Date = entity.Transaction_Date,
+                    Status= entity.Status
 
                 };
-                return IMasterRepository.UpdateRegularization(filter);
+                return IMasterRepository.InsertPayroll(filter);
             }
             catch (Exception ex)
             {
@@ -1694,7 +1700,7 @@ namespace FreshersApp.Business.Managers
                  
 
                 };
-                return IMasterRepository.UpdateRegularization(filter);
+                return IMasterRepository.UpdatePayroll(filter);
             }
             catch (Exception ex)
             {
@@ -2668,7 +2674,389 @@ namespace FreshersApp.Business.Managers
             }
         }
 
-       
+        public long UpdateCompany_Profile(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+                    Company_logo = entity.Company_logo,
+                    Company_Name = entity.Company_Name,
+                    Nature_Of_Business = entity.Nature_Of_Business,
+                    Address1 = entity.Address1,
+                    Address2 = entity.Address2,
+                    Zipcode = entity.Zipcode,
+                    RDO = entity.RDO,
+                    Email = entity.Email,
+                    Phone = entity.Phone,
+                    Password = entity.Password,
+                    Fax = entity.Fax,
+                    Tin = entity.Tin,
+                    SSN_No = entity.SSN_No,
+                    PhilHealthNumber = entity.PhilHealthNumber,
+                    HDMFNumber = entity.HDMFNumber,
+                    Admin_AuthorisedPerson = entity.Admin_AuthorisedPerson,
+                    Admin_PositionTitle = entity.Admin_PositionTitle,
+                    HR_AuthorisedPerson = entity.HR_AuthorisedPerson,
+                    HR_PositionTitle = entity.HR_PositionTitle,
+                    Finance_AuthorisedPerson = entity.Finance_AuthorisedPerson,
+                    Finance_PositionTitle = entity.Finance_PositionTitle,
+                    E_Signatory = entity.E_Signatory,
+                    Work_Days_Per_Year = entity.Work_Days_Per_Year,
+                    Work_Days_Per_Day = entity.Work_Days_Per_Day,
+                    Work_Months_Per_Year = entity.Work_Months_Per_Year,
+                    Work_hour_Start = entity.Work_hour_Start,
+                    Work_hour_End = entity.Work_hour_End,
+                    Break_Hours = entity.Break_Hours,
+                    Periods_Per_Month = entity.Periods_Per_Month,
+                    Absent_Deduction = entity.Absent_Deduction,
+                    Late_Deduction = entity.Late_Deduction,
+                    OverTime_Comeptition_Optional = entity.OverTime_Comeptition_Optional,
+                    OverTime_Comeptition_OTRates = entity.OverTime_Comeptition_OTRates,
+                    RestDays = entity.RestDays,
+                    thirteen_Month_Compuatation_Type = entity.thirteen_Month_Compuatation_Type,
+                    thirteen_Month_Deduct_Absent = entity.thirteen_Month_Deduct_Absent,
+                    thirteen_Month_Deduct_Late = entity.thirteen_Month_Deduct_Late,
+                    thirteen_Month_Optional = entity.thirteen_Month_Optional,
+                    FinalPay_Deduct_Absent = entity.FinalPay_Deduct_Absent,
+                    FinalPay_Deduct_Late = entity.FinalPay_Deduct_Late,
+                    Final_Pay_13th_Month = entity.Final_Pay_13th_Month,
+                    NetPay_Threshold = entity.NetPay_Threshold,
+                    SSS_Coverage = entity.SSS_Coverage,
+                    SSS_Optional = entity.SSS_Optional,
+                    PhilHealth_Coverage = entity.PhilHealth_Coverage,
+                    PhilHealth_Optional = entity.PhilHealth_Optional,
+                    HDMS = entity.HDMS,
+                    HDMF_Employer_Contribution = entity.HDMF_Employer_Contribution,
+                    PayRoll_Calender = entity.PayRoll_Calender,
+                    Tax_Table = entity.Tax_Table,
+                    Tax_Table_Starts_on = entity.Tax_Table_Starts_on,
+                    Tax_Table_Including_13thmonth = entity.Tax_Table_Including_13thmonth,
+                    Non_Tax_Essential_Sealing = entity.Non_Tax_Essential_Sealing,
+                    Deminimis_Exemption = entity.Deminimis_Exemption
+                };
+                return IMasterRepository.UpdateCompany_Profile(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<dynamic> GetTaxtableAnnual()
+        {
+            try
+            {
+                return IMasterRepository.GetTaxtableAnnual<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long InsertTaxtableAnnual(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    From = entity.From,
+                    To = entity.To,
+                    Fix = entity.Fix,
+                    Rate = entity.Rate
+
+
+                };
+                return IMasterRepository.InsertTaxtableAnnual(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long UpdateTaxtableAnnual(MasterEntity Entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = Entity.ID,
+                    From = Entity.From,
+                    To = Entity.To,
+                    Fix = Entity.Fix,
+                    Rate = Entity.Rate
+                };
+
+                return IMasterRepository.UpdateTaxtableAnnual(filter);
+            }
+
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteTaxtableAnnual(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteTaxtableAnnual(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<dynamic> GetLeaveBalance()
+        {
+            try
+            {
+                return IMasterRepository.GetLeaveBalance<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertLeaveBalance(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+
+                    SL_No = entity.SL_No,
+                    EmployeeID = entity.EmployeeID,
+                    LeaveType = entity.LeaveType,
+                    AnnualQuota = entity.AnnualQuota,
+                    CarriedForward = entity.CarriedForward,
+                    EntitlementTillDate = entity.EntitlementTillDate,
+                    AvailedTillDate = entity.AvailedTillDate,
+                    CurrentBalance = entity.CurrentBalance
+
+                };
+                return IMasterRepository.InsertLeaveBalance(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateLeaveBalance(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+                    SL_No = entity.SL_No,
+                    EmployeeID = entity.EmployeeID,
+                    LeaveType = entity.LeaveType,
+                    AnnualQuota = entity.AnnualQuota,
+                    CarriedForward = entity.CarriedForward,
+                    EntitlementTillDate = entity.EntitlementTillDate,
+                    AvailedTillDate = entity.AvailedTillDate,
+                    CurrentBalance = entity.CurrentBalance
+
+
+                };
+                return IMasterRepository.UpdateLeaveBalance(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteLeaveBalance(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteLeaveBalance(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+
+
+
+
+
+
+
+        //Digiofficeversion4//
+        public long DeleteCityType(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteCityType(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteCountryType(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteCountryType(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteHolidays(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteHolidays(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteLeaveType(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteLeaveType(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteShiftMaster(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteShiftMaster(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteStateType(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteStateType(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteTransportRequestType(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteTransportRequestType(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteWorkStationType_Master(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteWorkStationType_Master(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<dynamic> GetEntitlementMaster()
+        {
+            try
+            {
+                return IMasterRepository.GetEntitlementMaster<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertEntitlementMaster(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    Short = entity.Short,
+                    AnnualQuota = entity.AnnualQuota,
+                    CarriedForward = entity.CarriedForward,
+                    EntitlementTillDate = entity.EntitlementTillDate,
+                    AvailedTillDate = entity.AvailedTillDate,
+                    Current_Balance = entity.Current_Balance,
+                    Description = entity.Description
+                };
+                return IMasterRepository.InsertEntitlementMaster(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateEntitlementMaster(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+                    Short = entity.Short,
+                    AnnualQuota = entity.AnnualQuota,
+                    CarriedForward = entity.CarriedForward,
+                    EntitlementTillDate = entity.EntitlementTillDate,
+                    AvailedTillDate = entity.AvailedTillDate,
+                    Current_Balance = entity.Current_Balance,
+                    Description = entity.Description
+                };
+                return IMasterRepository.UpdateEntitlementMaster(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteEntitlementMaster(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteEntitlementMaster(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
 

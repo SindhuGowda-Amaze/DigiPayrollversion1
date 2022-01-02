@@ -29,6 +29,7 @@ namespace FreshersApp.Data.Interface
 
         IEnumerable<T> GetCompanyProfile<T>();
         Int64 InsertCompany_Profile(object filter);
+        Int64 UpdateCompany_Profile(object filter);
         Int64 DeleteCompanyProfile(object filter);
 
         IEnumerable<T> GetOTRates<T>();
@@ -175,6 +176,53 @@ namespace FreshersApp.Data.Interface
         Int64 UpdateProvinceMaster(object filter);
         Int64 DeleteProvinceMaster(object filter);
 
+        IEnumerable<T> GetTaxtableAnnual<T>();
+        Int64 InsertTaxtableAnnual(object filter);
+        Int64 UpdateTaxtableAnnual(object filter);
+        Int64 DeleteTaxtableAnnual(object filter);
+
+        IEnumerable<T> GetLeaveBalance<T>();
+        Int64 InsertLeaveBalance(object filter);
+        Int64 UpdateLeaveBalance(object filter);
+        Int64 DeleteLeaveBalance(object filter);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //Digiofficeversion4//
+        Int64 DeleteCityType(object filter);
+        Int64 DeleteCountryType(object filter);
+        Int64 DeleteHolidays(object filter);
+        Int64 DeleteLeaveType(object filter);
+        Int64 DeleteShiftMaster(object filter);
+        Int64 DeleteStateType(object filter);
+        Int64 DeleteTransportRequestType(object filter);
+        Int64 DeleteWorkStationType_Master(object filter);
+
+
+        IEnumerable<T> GetEntitlementMaster<T>();
+        Int64 InsertEntitlementMaster(object filter);
+        Int64 UpdateEntitlementMaster(object filter);
+        Int64 DeleteEntitlementMaster(object filter);
 
     }
 

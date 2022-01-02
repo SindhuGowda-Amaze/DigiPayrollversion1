@@ -268,7 +268,9 @@ D:\DigiPayroll_API\DigiPayrollAPIversion1\FreshersApp.API\bin\Google.Apis.Platfo
 D:\DigiPayroll_API\DigiPayrollAPIversion1\FreshersApp.API\bin\NUnrar.dll
 D:\DigiPayroll_API\DigiPayrollAPIversion1\FreshersApp.API\bin\Twilio.dll
 D:\DigiPayroll_API\DigiPayrollAPIversion1\FreshersApp.API\bin\SendGrid.CSharp.HTTP.Client.dll
+D:\DigiPayroll_API\DigiPayrollAPIversion1\FreshersApp.API\bin\MySql.Data.dll
 D:\DigiPayroll_API\DigiPayrollAPIversion1\FreshersApp.API\bin\Dapper.dll
+D:\DigiPayroll_API\DigiPayrollAPIversion1\FreshersApp.API\bin\Google.Protobuf.dll
 D:\DigiPayroll_API\DigiPayrollAPIversion1\FreshersApp.API\bin\common.pdb
 D:\DigiPayroll_API\DigiPayrollAPIversion1\FreshersApp.API\bin\common.dll.config
 D:\DigiPayroll_API\DigiPayrollAPIversion1\FreshersApp.API\bin\Cotopaxi.Business.pdb
@@ -290,7 +292,9 @@ D:\DigiPayroll_API\DigiPayrollAPIversion1\FreshersApp.API\bin\Google.Apis.Gmail.
 D:\DigiPayroll_API\DigiPayrollAPIversion1\FreshersApp.API\bin\Twilio.xml
 D:\DigiPayroll_API\DigiPayrollAPIversion1\FreshersApp.API\bin\SendGrid.CSharp.HTTP.Client.pdb
 D:\DigiPayroll_API\DigiPayrollAPIversion1\FreshersApp.API\bin\SendGrid.CSharp.HTTP.Client.dll.config
+D:\DigiPayroll_API\DigiPayrollAPIversion1\FreshersApp.API\bin\MySql.Data.xml
 D:\DigiPayroll_API\DigiPayrollAPIversion1\FreshersApp.API\bin\Dapper.xml
+D:\DigiPayroll_API\DigiPayrollAPIversion1\FreshersApp.API\bin\Google.Protobuf.xml
 D:\DigiPayroll_API\DigiPayrollAPIversion1\FreshersApp.API\obj\Debug\FreshersApp.API.csproj.AssemblyReference.cache
 D:\DigiPayroll_API\DigiPayrollAPIversion1\FreshersApp.API\obj\Debug\FreshersApp.API.csproj.CoreCompileInputs.cache
 D:\DigiPayroll_API\DigiPayrollAPIversion1\FreshersApp.API\obj\Debug\FreshersApp.API.csproj.CopyComplete

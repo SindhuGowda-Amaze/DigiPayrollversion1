@@ -1,4 +1,9 @@
 {
-  "ExpandedNodes": [],
+  "ExpandedNodes": [
+    "",
+    "\\FreshersApp.Data",
+    "\\FreshersApp.Data\\Interface"
+  ],
+  "SelectedNode": "\\FreshersApp.Data\\Interface\\IMasterRepository.cs",
   "PreviewInSolutionExplorer": false
 }
