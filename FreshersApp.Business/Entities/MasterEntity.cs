@@ -127,10 +127,41 @@ namespace FreshersApp.Business.Entities
 		public float SS_ER { get; set; }
 		public float SS_EE { get; set; }
 		public float SS_Total { get; set; }
-		public float MPF_ER { get; set; }
-		public float MPF_EE { get; set; }
-		public float EC_ER { get; set; }
+		//public float MPF_ER { get; set; }
+		//public float MPF_EE { get; set; }
+		//public float EC_ER { get; set; }
 		public float Total_Contribution { get; set; }
+
+
+		public string Range_Of_Compensastion { get; set; }
+		public string MSCRSS_EC { get; set; }
+		public string MSC_MPF { get; set; }
+		public string MSC_Total { get; set; }
+		public string RSS_ER { get; set; }
+		public string RSS_EE { get; set; }
+		public string RSS_Total { get; set; }
+		public string EC_ER { get; set; }
+		public string EC_EE { get; set; }
+		public string EE_Total { get; set; }
+		public string MPF_ER { get; set; }
+		public string MPF_EE { get; set; }
+		public string MPF_Total { get; set; }
+		public string ER { get; set; }
+		public string EE { get; set; }
+		public string Total { get; set; }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 		public string EmployeeID { get; set; }
