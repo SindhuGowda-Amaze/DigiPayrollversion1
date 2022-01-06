@@ -7,7 +7,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <_PublishTargetUrl>C:\FreshersAppapi</_PublishTargetUrl>
-    <History>True|2022-01-02T09:13:51.6424680Z;True|2022-01-02T13:50:47.7073250+05:30;True|2022-01-02T10:40:12.8322503+05:30;True|2021-12-20T17:59:58.1398816+05:30;True|2021-12-20T17:06:28.7359865+05:30;True|2021-12-20T16:52:40.3492851+05:30;True|2021-12-20T16:29:10.7572725+05:30;True|2021-12-18T15:28:06.7499751+05:30;True|2021-12-17T18:29:49.7754484+05:30;True|2021-12-17T18:14:51.8957960+05:30;True|2021-12-17T14:18:25.7172175+05:30;True|2021-12-17T10:41:39.5148157+05:30;</History>
+    <History>True|2022-01-06T08:45:48.8961702Z;True|2022-01-03T15:04:35.9758526+05:30;True|2022-01-02T14:43:51.6424680+05:30;True|2022-01-02T13:50:47.7073250+05:30;True|2022-01-02T10:40:12.8322503+05:30;True|2021-12-20T17:59:58.1398816+05:30;True|2021-12-20T17:06:28.7359865+05:30;True|2021-12-20T16:52:40.3492851+05:30;True|2021-12-20T16:29:10.7572725+05:30;True|2021-12-18T15:28:06.7499751+05:30;True|2021-12-17T18:29:49.7754484+05:30;True|2021-12-17T18:14:51.8957960+05:30;True|2021-12-17T14:18:25.7172175+05:30;True|2021-12-17T10:41:39.5148157+05:30;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="ApplicationInsights.config">
@@ -50,28 +50,28 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/11/2021 18:29:53</publishTime>
     </File>
     <File Include="bin/Cotopaxi.API.dll">
-      <publishTime>01/02/2022 14:43:50</publishTime>
+      <publishTime>01/06/2022 14:15:48</publishTime>
     </File>
     <File Include="bin/Cotopaxi.API.pdb">
-      <publishTime>01/02/2022 14:43:50</publishTime>
+      <publishTime>01/06/2022 14:15:48</publishTime>
     </File>
     <File Include="bin/Cotopaxi.Business.dll">
-      <publishTime>01/02/2022 13:50:37</publishTime>
+      <publishTime>01/06/2022 14:15:42</publishTime>
     </File>
     <File Include="bin/Cotopaxi.Business.dll.config">
       <publishTime>08/11/2021 18:29:54</publishTime>
     </File>
     <File Include="bin/Cotopaxi.Business.pdb">
-      <publishTime>01/02/2022 13:50:37</publishTime>
+      <publishTime>01/06/2022 14:15:42</publishTime>
     </File>
     <File Include="bin/Cotopaxi.Data.dll">
-      <publishTime>01/02/2022 10:40:03</publishTime>
+      <publishTime>01/06/2022 14:15:42</publishTime>
     </File>
     <File Include="bin/Cotopaxi.Data.dll.config">
       <publishTime>08/11/2021 18:29:54</publishTime>
     </File>
     <File Include="bin/Cotopaxi.Data.pdb">
-      <publishTime>01/02/2022 10:40:03</publishTime>
+      <publishTime>01/06/2022 14:15:42</publishTime>
     </File>
     <File Include="bin/credentials.json">
       <publishTime>08/11/2021 18:29:53</publishTime>

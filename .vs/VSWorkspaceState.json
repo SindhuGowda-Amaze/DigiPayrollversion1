@@ -1,9 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\FreshersApp.Business",
+    "\\FreshersApp.Business\\Managers",
     "\\FreshersApp.Data",
-    "\\FreshersApp.Data\\Interface"
+    "\\FreshersApp.Data\\Interface",
+    "\\FreshersApp.Data\\Repositories"
   ],
-  "SelectedNode": "\\FreshersApp.Data\\Interface\\IMasterRepository.cs",
+  "SelectedNode": "\\FreshersApp.Business\\Managers\\MasterManager.cs",
   "PreviewInSolutionExplorer": false
 }

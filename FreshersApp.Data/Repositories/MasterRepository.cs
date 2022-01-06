@@ -397,6 +397,18 @@ namespace FreshersApp.Data.Repositories
             }
         }
 
+        public IEnumerable<T> GetSSS_New<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[SProc_GetSSS_New]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public long InsertSSS(object filter)
         {
             try

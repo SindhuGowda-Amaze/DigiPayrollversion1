@@ -50,6 +50,7 @@ namespace FreshersApp.Data.Interface
 
 
         IEnumerable<T> GetSSS<T>();
+        IEnumerable<T> GetSSS_New<T>();
         Int64 InsertSSS(object filter);
         Int64 UpdateSSS(object filter);
         Int64 DeleteSSS(object filter);

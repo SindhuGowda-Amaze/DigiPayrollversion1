@@ -44,6 +44,7 @@ namespace FreshersApp.Business.Interface
         Int64 UpdateCompany_Profile(MasterEntity entity);
 
         IEnumerable<dynamic> GetSSS();
+        IEnumerable<dynamic> GetSSS_New();
 
         Int64 InsertSSS(MasterEntity entity);
 

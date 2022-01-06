@@ -418,13 +418,11 @@ namespace FreshersApp.Business.Managers
                 var filter = new
                 {
                     ID = entity.ID,
-                    ProjectTypeID = entity.ProjectTypeID,
-                    ProjectName = entity.ProjectName,
-                    ProjectDescription = entity.ProjectDescription,
-                    ClientName = entity.ClientName,
-                    ClientLocation = entity.ClientLocation,
-                    Highlights = entity.Highlights,
-                    Photo = entity.PhotoURL
+                    Day = entity.Day,
+                    Normal = entity.Normal,
+                    OT = entity.OT,
+                    ND = entity.ND,
+                    NDOT = entity.NDOT
                 };
                 return IMasterRepository.UpdateOTRates(filter);
             }
@@ -581,6 +579,21 @@ namespace FreshersApp.Business.Managers
                 throw ex;
             }
         }
+
+
+        public IEnumerable<dynamic> GetSSS_New()
+        {
+            try
+            {
+                return IMasterRepository.GetSSS_New<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
 
         public long InsertSSS(MasterEntity entity)
         {

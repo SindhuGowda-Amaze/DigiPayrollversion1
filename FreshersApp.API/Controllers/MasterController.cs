@@ -859,6 +859,27 @@ namespace FreshersApp.API.Controllers
             }
             return response;
         }
+        [HttpGet]
+        [Route("Master/GetSSS_New")]
+        public HttpResponseMessage GetSSS_New()
+        {
+            HttpResponseMessage response;
+            try
+            {
+
+                object res = IMasterManager.GetSSS_New();
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error(" Error in GetSSS_New " + ex);
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
 
         [HttpPost]
         [Route("Master/InsertSSS")]
